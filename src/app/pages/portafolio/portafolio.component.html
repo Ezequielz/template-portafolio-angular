@@ -34,7 +34,7 @@
 
         <a 
           *ngFor="let producto of productosServices.productos"
-          routerLink="/item" 
+          [routerLink]="['/item', producto.cod]" 
           class="rk-item ae-masonry__item animate__animated animate__fadeIn"
         >
           <img src="assets/productos/{{producto.url}}.jpg" alt="">
